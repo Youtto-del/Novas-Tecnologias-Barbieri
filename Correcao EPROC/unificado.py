@@ -30,7 +30,8 @@ def download_planilha_comum():
         value='//*[@id="conteudoCitacoesIntimacoesRS"]/div[2]/table/tbody/tr[7]/td[2]/a'
     )
     actions.move_to_element(planilha).click().perform()
-    navegador.find_element(By.XPATH, value='//*[@id="conteudoCitacoesIntimacoesRS"]/div[2]/table/tbody/tr[7]/td[2]/a').click()
+    sleep(0.5)
+    navegador.find_element(By.XPATH, value='//*[@id="conteudoCitacoesIntimacoesRS"]/div[2]/table/tbody/tr[4]/td[2]/a').click()
     janelas = navegador.window_handles
     navegador.switch_to.window(janelas[1])
     navegador.find_element(by=By.ID, value='sbmPlanilha').click()
