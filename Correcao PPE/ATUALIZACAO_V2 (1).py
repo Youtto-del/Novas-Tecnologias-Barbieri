@@ -6,7 +6,7 @@ from selenium.common.exceptions import NoSuchElementException
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
 
-
+#troquei o site
 
 #DADOS
 login = '01401116035'
