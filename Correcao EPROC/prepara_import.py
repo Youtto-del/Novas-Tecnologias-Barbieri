@@ -1,27 +1,29 @@
 import pandas as pd
-from openpyxl import load_workbook
+from openpyxl import Workbook
 
 # Carrega o modelo
 modelo = 'Lista de notas.xlsx'
-planilha = load_workbook(modelo)
+planilha = Workbook()
+sheet = planilha.active
 
-# Leitura da aba
-aba = 'importacao'
-writer = pd.ExcelWriter(modelo, engine='openpyxl', mode='a')
 
-writer.book = planilha
-df = pd.read_excel(planilha, sheet_name=aba)
+df = pd.read_excel(modelo)
 
 # seleção de células a partir de critérios
-filtro1 = df['Status 1'] == 'Migrado'
-filtro2 = df['Status 1'].str.contains('Digitalizado')
+filtro_status1_1 = df[df['Status 1'] == 'Migrado']
+filtro_status1_2 = df[df['Status 1'].str.contains('Digitalizado')]
+
+filtro_status2_1 = df[df['Status 2'] == 'Migrado']
+filtro_status2_2 = df[df['Status 2'].str.contains('Digitalizado')]
+
+filtro_status3_1 = df[df['Status 3'] == 'Migrado']
+filtro_status3_2 = df[df['Status 3'].str.contains('Digitalizado')]
+
+frames = [filtro_status1_1, filtro_status1_2, filtro_status2_1, filtro_status2_2, filtro_status3_1, filtro_status3_2]
 
 # aplicação dos filtros
-df_filtrado = df.loc[filtro1 & filtro2]
+df_filtrado = pd.concat(frames)
+
 
 # escrita dos dados filtrados em uma nova aba
-nome_nova_aba = 'resultados'
-df_filtrado.to_excel(writer, sheet_name=nome_nova_aba, index=False)
-
-# salva as alterações na planilha
-writer.save()
+df_filtrado.to_excel('Filtrado.xlsx', index=False)
