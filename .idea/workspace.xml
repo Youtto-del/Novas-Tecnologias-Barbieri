@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e09293a7-04c0-4ff0-9a1f-e23a7e0d459b" name="Changes" comment="Avanço do codigo de preparação e testes">
+    <list default="true" id="e09293a7-04c0-4ff0-9a1f-e23a7e0d459b" name="Changes" comment="Correção da preparação de dados">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Correcao EPROC/Filtrado.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Filtrado.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/Lista de notas.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Lista de notas.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Correcao EPROC/Modelo EPROC ATT.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Modelo EPROC ATT.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/Resultado consulta.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Resultado consulta.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/df3.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/df3_corrigido.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/df3_teste.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/df4_corrigido.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/df4_teste.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/df_final.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/df_teste.xlsx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/prepara_import.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/prepara_import.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/relatorio_desdobramentos.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/relatorio_desdobramentos.xlsx" afterDir="false" />
     </list>
@@ -39,14 +34,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Administrador/Desktop/projetos_git",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrador/Desktop/projetos_git&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.prepara_import">
     <configuration name="prepara_import" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projetos_git" />
@@ -135,7 +130,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678839437417</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Correção da preparação de dados">
+      <created>1679333443060</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1679333443060</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -151,6 +153,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Avanço do codigo de preparação e testes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Avanço do codigo de preparação e testes" />
+    <MESSAGE value="Correção da preparação de dados" />
+    <option name="LAST_COMMIT_MESSAGE" value="Correção da preparação de dados" />
   </component>
 </project>
