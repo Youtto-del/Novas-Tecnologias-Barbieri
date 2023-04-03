@@ -1,8 +1,13 @@
+import datetime
 import pandas as pd
 from openpyxl import load_workbook
+import shutil
 
-# Carrega as tabelas
-lista_de_notas = 'Lista de notas.xlsx'
+
+data_atual = datetime.date.today().strftime("%d%m%y")
+
+# Copiando arquivo base a partir do modelo
+shutil.copy('Modelo EPROC ATT.xlsx', f'Correcao Digit EPROC ATT - {data_atual}.xlsx')
 
 # Importando e limpando planilha de desdobramentos
 desdobramentos = pd.read_excel('relatorio_desdobramentos.xlsx')
@@ -10,17 +15,17 @@ colunas_tabela = list(desdobramentos.columns)
 colunas_novas = list(desdobramentos.iloc[2])
 dici = {}
 for x in range(len(colunas_tabela)):
-  dici[colunas_tabela[x]] = colunas_novas[x]
+    dici[colunas_tabela[x]] = colunas_novas[x]
 desdobramentos.rename(columns=dici, inplace=True)
 desdobramentos.drop(axis=0, index=[0, 1, 2], inplace=True)
 
 # Contrói dataframe da lista de notas
-df = pd.read_excel(lista_de_notas)
+df_notas = pd.read_excel('Lista de notas.xlsx')
 
-# filtra os casos de "Migrado" e "Digitalizado"
+# Filtra os casos de "Migrado" e "Digitalizado" e armazena em uma lista, assim como os erros
 resultado_linha = []
 erros = []
-for linha in df.iterrows():
+for linha in df_notas.iterrows():
     if linha[1]['Status 1'] == 'Migrado' or linha[1]['Status 1'] == 'Digitalizado':
         insercao = [linha[1]['Processo'], linha[1]['originario_1'], linha[1]['Status 1']]
         resultado_linha.append(insercao)
@@ -33,18 +38,16 @@ for linha in df.iterrows():
     else:
         erros.append(linha[1])
 
-# cria e exportar dataframe do resultado filtrado
+# cria e exporta dataframe do resultado filtrado
 df_filtrado = pd.DataFrame(resultado_linha, columns=['Processo', 'Originario', 'Status'])
 df_filtrado.to_excel('Resultado filtrado.xlsx', index=False)
 print(df_filtrado)
 print('Processos fora das hipóteses de digitalização:', len(erros))
 
-teste = [y for y in df_filtrado['Processo'] if y in list(desdobramentos['numero'])]
-print(teste)
-
+# Descobre a pasta dos processos a partir do processo originário
 resultado_final = []
 for item in df_filtrado.iterrows():
-    if item[1]['Originario'] in list(desdobramentos['numero']):
+    if item[1]['Originario'] in list(desdobramentos['numero']) and item[1]['Processo'] not in list(desdobramentos['numero']):
         index = list(desdobramentos['numero']).index(item[1]['Originario'])
         pasta_desdobramento = desdobramentos.iloc[index, 2]
         print(pasta_desdobramento)
@@ -53,25 +56,24 @@ for item in df_filtrado.iterrows():
                                 item[1]['Originario'],
                                 item[1]['Processo']])
     else:
-        print(item[1]['Originario'], 'não encontrado')
+        print(item[1]['Originario'], '- não encontrado')
 
-print(resultado_final)
+# Cria um dataframe com os novos dados
+df_resultado_final = pd.DataFrame(resultado_final,
+                                  columns=['Pasta', 'Pasta desdobramento', 'Número antigo', 'Processo'])
+print(df_resultado_final.head())
 
-
-# Crie um dataframe com os novos dados
-df_resultado_final = pd.DataFrame(resultado_final, columns=['Pasta', 'Pasta desdobramento', 'Número antigo', 'Processo'])
-
-# Carregue a planilha existente
-modelo_att = load_workbook('Modelo EPROC ATT.xlsx')
+# Carrega a planilha modelo base
+modelo_att = load_workbook(f'Correcao Digit EPROC ATT - {data_atual}.xlsx')
 worksheet = modelo_att.active
 
-# Selecione a planilha que você deseja adicionar o novo dataframe
-writer = pd.ExcelWriter('Modelo EPROC ATT.xlsx', engine='openpyxl')
+# Seleciona a planilha na qual será inserido o novo dataframe
+writer = pd.ExcelWriter(f'Correcao Digit EPROC ATT - {data_atual}.xlsx')
 writer.book = modelo_att
 
-# Adicione o novo dataframe na planilha existente
+# Adiciona o novo dataframe na planilha existente
 df_resultado_final.to_excel(writer, index=False, header=False, sheet_name='Importacao', startrow=worksheet.max_row)
 
-# Salve as mudanças na planilha
+# Salva as mudanças na planilha
 writer.close()
 
