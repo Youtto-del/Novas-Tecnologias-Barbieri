@@ -7,7 +7,7 @@ import shutil
 data_atual = datetime.date.today().strftime("%d%m%y")
 
 # Copiando arquivo base a partir do modelo
-shutil.copy('Modelo EPROC ATT.xlsx', f'Correcao Digit EPROC ATT - {data_atual}.xlsx')
+shutil.copy('Modelo EPROC ATT.xlsx', rf'.\SmartImports\Correcao Digit EPROC ATT - {data_atual}.xlsx')
 
 # Importando e limpando planilha de desdobramentos
 desdobramentos = pd.read_excel('relatorio_desdobramentos.xlsx')
@@ -64,12 +64,11 @@ df_resultado_final = pd.DataFrame(resultado_final,
 print(df_resultado_final.head())
 
 # Carrega a planilha modelo base
-modelo_att = load_workbook(f'Correcao Digit EPROC ATT - {data_atual}.xlsx')
+modelo_att = load_workbook(rf'.\SmartImports\Correcao Digit EPROC ATT - {data_atual}.xlsx')
 worksheet = modelo_att.active
 
 # Seleciona a planilha na qual será inserido o novo dataframe
-writer = pd.ExcelWriter(f'Correcao Digit EPROC ATT - {data_atual}.xlsx')
-writer.book = modelo_att
+writer = pd.ExcelWriter(rf'.\SmartImports\Correcao Digit EPROC ATT - {data_atual}.xlsx')
 
 # Adiciona o novo dataframe na planilha existente
 df_resultado_final.to_excel(writer, index=False, header=False, sheet_name='Importacao', startrow=worksheet.max_row)
