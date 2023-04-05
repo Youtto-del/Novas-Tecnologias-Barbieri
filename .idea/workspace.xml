@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e09293a7-04c0-4ff0-9a1f-e23a7e0d459b" name="Changes" comment="Corrigidos detalhes de documentação e arquivo excel final">
-      <change afterPath="$PROJECT_DIR$/Correcao EPROC/relatorio_email.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/Correcao Digit EPROC ATT - 030423.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/Lista de notas.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Lista de notas.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/Resultado consulta.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Resultado consulta.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/Resultado filtrado.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Resultado filtrado.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/relatorio_desdobramentos.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/relatorio_desdobramentos.xlsx" afterDir="false" />
-    </list>
+    <list default="true" id="e09293a7-04c0-4ff0-9a1f-e23a7e0d459b" name="Changes" comment="Criado modelo que baixa o relatório de desdobramentos do email, renomeando-o para servir de base ao código unificado. Correção do modelo de smartimport para tirar warningalerts" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -180,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680547984902</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Criado modelo que baixa o relatório de desdobramentos do email, renomeando-o para servir de base ao código unificado. Correção do modelo de smartimport para tirar warningalerts">
+      <created>1680711420087</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1680711420087</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -199,6 +198,7 @@
     <MESSAGE value="Correção da preparação de dados" />
     <MESSAGE value="Correção do código para preparar, filtrar e exportar os dados. Ainda é necessário tornar o modelo reutilizável e validar os filtros" />
     <MESSAGE value="Corrigidos detalhes de documentação e arquivo excel final" />
-    <option name="LAST_COMMIT_MESSAGE" value="Corrigidos detalhes de documentação e arquivo excel final" />
+    <MESSAGE value="Criado modelo que baixa o relatório de desdobramentos do email, renomeando-o para servir de base ao código unificado. Correção do modelo de smartimport para tirar warningalerts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Criado modelo que baixa o relatório de desdobramentos do email, renomeando-o para servir de base ao código unificado. Correção do modelo de smartimport para tirar warningalerts" />
   </component>
 </project>
