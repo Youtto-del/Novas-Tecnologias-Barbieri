@@ -8,6 +8,11 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 from pathlib import Path
+from prepara_import import prepara_import
+import teste_smtp_lss as re
+
+# cria o arquivo relatorios_desdobramentos
+re.relatorio_email()
 
 
 def acessa_eproc():
@@ -219,9 +224,6 @@ def consulta_base_de_dados(df_consulta):
     resultado_consulta = pd.DataFrame(consulta_originario_no_principal)
     resultado_consulta.to_excel('Resultado consulta.xlsx')
 
-# PLANILHA COM STATUS
-# SEPARAR CASOS POR STATUS
-# FUNÇÃO PARA EXPORTAR PLANILHA FINAL (SMART IMPORT)
 
 # EXECUÇÃO
 options = webdriver.ChromeOptions()
@@ -243,3 +245,8 @@ cadastrados, consultas, desdobramentos = realiza_triagem()
 df_notas = coleta_originarios(cadastrados, consultas, desdobramentos)
 consulta_base_de_dados(df_notas)
 navegador.quit()
+
+# cria o modelo para SmartImport
+prepara_import()
+# re.enviar_email()
+
