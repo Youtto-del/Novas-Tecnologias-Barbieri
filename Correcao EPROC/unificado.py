@@ -2,14 +2,13 @@ from datetime import datetime
 from time import sleep
 import pandas as pd
 from easygui import msgbox
-from selenium.common import NoSuchElementException
+from selenium.common import NoSuchElementException, ElementClickInterceptedException
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 from pathlib import Path
 from prepara_import import prepara_import
-import teste_smtp_lss as re
 
 # cria o arquivo relatorios_desdobramentos
 # re.relatorio_email()
@@ -37,9 +36,16 @@ def download_planilha_comum():
     actions.move_to_element(planilha).click().perform()
     sleep(0.5)
     navegador.find_element(By.XPATH, value='//*[@id="conteudoCitacoesIntimacoesRS"]/div[2]/table/tbody/tr[4]/td[2]/a').click()
+    sleep(2)
     janelas = navegador.window_handles
     navegador.switch_to.window(janelas[1])
-    navegador.find_element(by=By.ID, value='sbmPlanilha').click()
+    try:
+        navegador.find_element(by=By.XPATH, value='//*[@id="sbmPlanilha"]').click()
+    except ElementClickInterceptedException:
+        print('Erro ao baixar a planilha. Usando outra alternativa...')
+        button = navegador.find_element(by=By.XPATH, value='//*[@id="sbmPlanilha"]')
+        navegador.execute_script("arguments[0].click();", button)
+
     sleep(4)
     print('Download feito')
 
@@ -61,6 +67,8 @@ def importa_intimacoes():
     print('Importando intimações...')
     p = Path.cwd()
     arquivo = [x for x in p.iterdir() if x.is_file() if x.stem[:16] == 'citacaoIntimacao']
+    print(len(arquivo))
+    print(arquivo)
     data = datetime.now().strftime("%d%m%y")
     Path.replace(arquivo[0], rf'.\log\Intimacoes_{data}.xls')
     intimacoes = pd.read_excel(rf'.\log\Intimacoes_{data}.xls')
@@ -111,13 +119,12 @@ def coleta_originarios(cadastrados, consultas, desdobramentos):
             navegador.close()
             navegador.switch_to.window(navegador.window_handles[0])
             primeiro_acesso = False
-        navegador.find_element(
-            by=By.XPATH,
-            value='//*[@id="navbar"]/div/div[3]/div[3]/form/input[1]').send_keys(processo)  # CAMPO PESQUISA
-
-        navegador.find_element(
-            by=By.XPATH,
-            value='//*[@id="navbar"]/div/div[3]/div[3]/form/button[1]').click()  # BOTAO PARA PESQUISAR
+        navegador.find_element(by=By.ID, value='txtNumProcessoPesquisaRapida').send_keys(processo)  # CAMPO PESQUISA
+        try:
+            navegador.find_element(by=By.NAME, value='btnPesquisaRapidaSubmit').click()  # BOTAO PARA PESQUISAR
+        except:
+            pesquisa = navegador.find_element(by=By.NAME, value='btnPesquisaRapidaSubmit')
+            navegador.execute_script("arguments[0].click();", pesquisa)
 
         # DADOS DE CAPA
         # TENTA COLETAR PROCESSO ORIGINÁRIO
@@ -125,7 +132,7 @@ def coleta_originarios(cadastrados, consultas, desdobramentos):
         try:
             processo_originario_1 = navegador.find_element(
                 by=By.XPATH,
-                value='//*[@id="tableRelacionado"]/tbody/tr[1]/td[1]').text
+                value='//*[@id="tableRelacionado"]/tbody/tr/td[1]').text
 
             if len(processo_originario_1) >= 20:
                 processo_originario_1 = processo_originario_1[0:-3]
@@ -173,9 +180,7 @@ def coleta_originarios(cadastrados, consultas, desdobramentos):
 
         # COLETA DATA DE DISTRIBUIÇÃO
         sleep(0.6)
-        data_distribuicao = navegador.find_element(
-            by=By.XPATH,
-            value='//*[@id="txtAutuacao"]').text  # COLETA DATA DE DISTRIBUIÇÃO
+        data_distribuicao = navegador.find_element(by=By.ID, value='txtAutuacao').text  # COLETA DATA DE DISTRIBUIÇÃO
         sleep(0.5)
         data_reduzida = data_distribuicao[0:10]
 
