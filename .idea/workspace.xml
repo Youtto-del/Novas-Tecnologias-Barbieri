@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e09293a7-04c0-4ff0-9a1f-e23a7e0d459b" name="Changes" comment="workspace">
-      <change afterPath="$PROJECT_DIR$/Correcao EPROC/teste_smtp_lss.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Analise notas EPROC/analise_notas_eproc.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/Lista de notas.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Lista de notas.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/Resultado consulta.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Resultado consulta.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/Resultado filtrado.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Resultado filtrado.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/SmartImports/Correcao Digit EPROC ATT - 050423.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/SmartImports/Correcao Digit EPROC ATT - 050423.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/log/Intimacoes_050423.xls" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/log/Intimacoes_050423.xls" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/prepara_import.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/prepara_import.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/relatorio_desdobramentos.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/relatorio_desdobramentos.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/relatorio_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/relatorio_email.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Correcao EPROC/teste_smtp_lss.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/teste_smtp_lss.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/unificado.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/unificado.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,7 +45,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.teste_smtp_lss">
+  <component name="RunManager" selected="Python.unificado">
     <configuration name="prepara_import" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projetos_git" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -154,9 +153,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.teste_smtp_lss" />
         <item itemvalue="Python.unificado" />
         <item itemvalue="Python.relatorio_email" />
+        <item itemvalue="Python.teste_smtp_lss" />
         <item itemvalue="Python.prepara_import" />
         <item itemvalue="Python.teste" />
       </list>

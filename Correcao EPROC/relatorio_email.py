@@ -45,7 +45,7 @@ def enviar_email():
     host = 'smtp.gmail.com'
     port = '587'
     login = 'navarroreports@gmail.com'
-    senha = 'dezwjuzigsmchbrr'
+    senha = 'SenhaReport&2023'
 
     server = smtplib.SMTP(host, port)
     server.ehlo()

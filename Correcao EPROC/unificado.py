@@ -12,7 +12,7 @@ from prepara_import import prepara_import
 import teste_smtp_lss as re
 
 # cria o arquivo relatorios_desdobramentos
-re.relatorio_email()
+# re.relatorio_email()
 
 
 def acessa_eproc():
