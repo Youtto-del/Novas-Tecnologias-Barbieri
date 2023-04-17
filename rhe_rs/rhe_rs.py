@@ -99,11 +99,11 @@ for idx, row in dados.iterrows():
 
 
     # ITERA PELOS IDS ENCONTRADOS E BAIXA OS PDFS
-    for idx, row in df.iterrows():
-        if row['data'] == data:
+    for i, r in df.iterrows():
+        if r['data'] == data:
             break
-        correcao_tipo = row['tipo'].replace(' ', '+')
-        link_financeiro = f'https://secweb.procergs.com.br/rheportal/pages/contracheque/contracheque-form.xhtml?id={row["id"]}&num_folha=1&emp_codigo=1&mes_folha={row["data"][:2]}&ano_folha={row["data"][-4:]}&nome_folha={correcao_tipo}'
+        correcao_tipo = r['tipo'].replace(' ', '+')
+        link_financeiro = f'https://secweb.procergs.com.br/rheportal/pages/contracheque/contracheque-form.xhtml?id={r["id"]}&num_folha=1&emp_codigo=1&mes_folha={r["data"][:2]}&ano_folha={r["data"][-4:]}&nome_folha={correcao_tipo}'
         print(link_financeiro)
 
         navegador.get(url=link_financeiro)
@@ -112,7 +112,7 @@ for idx, row in dados.iterrows():
         navegador.find_element(By.ID, value='j_idt133').click()
         sleep(3)
 
-        nome_arquivo = rf'.\Resultados\{id_cliente}\{row["data"][-4:]}-{row["data"][:2]}-{correcao_tipo}-{id_cliente}.pdf'
+        nome_arquivo = rf'.\Resultados\{id_cliente}\{r["data"][-4:]}-{r["data"][:2]}-{correcao_tipo}-{id_cliente}.pdf'
 
         try:
             while len(list(Path(download_dir).glob('*.pdf'))) == 0:
