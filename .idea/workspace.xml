@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e09293a7-04c0-4ff0-9a1f-e23a7e0d459b" name="Changes" comment="workspace">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="e09293a7-04c0-4ff0-9a1f-e23a7e0d459b" name="Changes" comment="ACorreçõs de duplicidades rhe">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/Lista de notas.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Lista de notas.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/Resultado consulta.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Resultado consulta.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/Resultado filtrado.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Resultado filtrado.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/relatorio_desdobramentos.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/relatorio_desdobramentos.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/relatorio_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/relatorio_email.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/teste_smtp_lss.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/teste_smtp_lss.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/unificado.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/unificado.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rhe_rs/Resultado.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/rhe_rs/Resultado.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/rhe_rs/rhe_rs.py" beforeDir="false" afterPath="$PROJECT_DIR$/rhe_rs/rhe_rs.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -226,7 +223,21 @@
       <option name="project" value="LOCAL" />
       <updated>1680711478814</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Adatapação para alterações no site do eproc">
+      <created>1681758084198</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1681758084198</updated>
+    </task>
+    <task id="LOCAL-00010" summary="ACorreçõs de duplicidades rhe">
+      <created>1681758102588</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1681758102588</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -248,6 +259,8 @@
     <MESSAGE value="Criado modelo que baixa o relatório de desdobramentos do email, renomeando-o para servir de base ao código unificado. Correção do modelo de smartimport para tirar warningalerts" />
     <MESSAGE value="Arquivos de resultados" />
     <MESSAGE value="workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace" />
+    <MESSAGE value="Adatapação para alterações no site do eproc" />
+    <MESSAGE value="ACorreçõs de duplicidades rhe" />
+    <option name="LAST_COMMIT_MESSAGE" value="ACorreçõs de duplicidades rhe" />
   </component>
 </project>
