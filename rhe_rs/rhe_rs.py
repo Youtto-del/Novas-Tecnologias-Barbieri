@@ -1,5 +1,6 @@
 from time import sleep
 import pandas as pd
+from selenium.common import ElementNotInteractableException
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
@@ -8,6 +9,7 @@ from selenium import webdriver
 from pathlib import Path
 import tempfile
 import shutil
+from easygui import msgbox
 
 # CONFIGURA
 options = webdriver.ChromeOptions()
@@ -39,10 +41,13 @@ for idx, row in dados.iterrows():
 
     # NAVEGADOR
     navegador.get('https://secweb.procergs.com.br/rheportal/logon.xhtml')
-    navegador.find_element(By.ID, value='formLogin_:matriculaWeb').send_keys(id_cliente)
-    navegador.find_element(By.ID, value='formLogin_:senhaWeb').send_keys(senha)
-    navegador.find_element(By.ID, value='formLogin_:entrarWeb').click()
-    sleep(1.5)
+    sleep(2)
+
+    navegador.find_element(By.XPATH, value='//*[@id="formLogin:matriculaWeb"]').send_keys(id_cliente)
+    navegador.find_element(By.XPATH, value='//*[@id="formLogin:senhaWeb"]').send_keys(senha)
+
+    msgbox('Clique em entrar antes de prosseguir')
+
     navegador.get('https://secweb.procergs.com.br/rheportal/pages/contracheque/contracheque-list.xhtml')
     sleep(1.5)
 
@@ -71,7 +76,7 @@ for idx, row in dados.iterrows():
     lista_info_contracheques = []
     for pg in range(0, int(paginas)):
         trs = navegador.find_elements(By.XPATH, value='//*[@id="form:lista_data"]/tr')      # TRS PARA TEXTOS
-        spans = navegador.find_elements(By.XPATH, value='//*[@id="form:lista_data"]/tr/td[1]/a')        # SPANS PARA HREFS
+        spans = navegador.find_elements(By.XPATH, value='//*[@id="form:lista_data"]/tr/td[1]/a')     # SPANS PARA HREFS
         print(len(trs))
         print(len(spans))
 
@@ -97,31 +102,37 @@ for idx, row in dados.iterrows():
     df.to_excel('Resultado.xlsx')
     print(len(lista_info_contracheques), 'Contracheques encontrados')
 
-
     # ITERA PELOS IDS ENCONTRADOS E BAIXA OS PDFS
     for i, r in df.iterrows():
         if r['data'] == data:
             break
         correcao_tipo = r['tipo'].replace(' ', '+')
-        link_financeiro = f'https://secweb.procergs.com.br/rheportal/pages/contracheque/contracheque-form.xhtml?id={r["id"]}&num_folha=1&emp_codigo=1&mes_folha={r["data"][:2]}&ano_folha={r["data"][-4:]}&nome_folha={correcao_tipo}'
-        print(link_financeiro)
+        if correcao_tipo == '+Mensal':
+            link_financeiro = f'https://secweb.procergs.com.br/rheportal/pages/contracheque/contracheque-form.xhtml?id={r["id"]}&num_folha=1&emp_codigo=1&mes_folha={r["data"][:2]}&ano_folha={r["data"][-4:]}&nome_folha={correcao_tipo}'
+            print(link_financeiro)
 
-        navegador.get(url=link_financeiro)
-        navegador.find_element(By.ID, value='j_idt131_menuButton').click()
-        sleep(0.5)
-        navegador.find_element(By.ID, value='j_idt133').click()
-        sleep(3)
+            navegador.get(url=link_financeiro)
+            try:
+                navegador.find_element(By.NAME, value='j_idt131_menuButton').click()
+                sleep(0.5)
+                navegador.find_element(By.NAME, value='j_idt133').click()
+                sleep(3)
+            except ElementNotInteractableException:
+                navegador.find_element(By.NAME, value='impPDF').click()
+                sleep(0.5)
+                navegador.find_element(By.NAME, value='back').click()
+                sleep(3)
 
-        nome_arquivo = rf'.\Resultados\{id_cliente}\{r["data"][-4:]}-{r["data"][:2]}-{correcao_tipo}-{id_cliente}.pdf'
+            nome_arquivo = rf'.\Resultados\{id_cliente}\{r["data"][-4:]}-{r["data"][:2]}-{correcao_tipo[1:]}-{id_cliente}.pdf'
 
-        try:
-            while len(list(Path(download_dir).glob('*.pdf'))) == 0:
-                sleep(1)  # espera o download terminar
-            # pega o 1o pdf que tiver, só terá 1 pois a pasta estava vazia antes:
-            arquivo = list(Path(download_dir).glob('*.pdf'))[0]
-            shutil.move(arquivo, nome_arquivo)
-        finally:
-            shutil.rmtree(download_dir)  # remove todos os arquivos temporários
+            try:
+                while len(list(Path(download_dir).glob('*.pdf'))) == 0:
+                    sleep(1)  # espera o download terminar
+                # pega o 1o pdf que tiver, só terá 1 pois a pasta estava vazia antes:
+                arquivo = list(Path(download_dir).glob('*.pdf'))[0]
+                shutil.move(arquivo, nome_arquivo)
+            finally:
+                shutil.rmtree(download_dir)  # remove todos os arquivos temporários
 
 navegador.quit()
 print('FINALIZADO')
