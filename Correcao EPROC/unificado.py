@@ -9,10 +9,10 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 from pathlib import Path
 from prepara_import import prepara_import
-import teste_smtp_lss as re
+import novo_relatorio as re
 
 # cria o arquivo relatorios_desdobramentos
-# re.relatorio_email()
+re.relatorio_email()
 
 
 def acessa_eproc():

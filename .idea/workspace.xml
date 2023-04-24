@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e09293a7-04c0-4ff0-9a1f-e23a7e0d459b" name="Changes" comment="workspace">
-      <change afterPath="$PROJECT_DIR$/Analise notas EPROC/analise_notas_eproc.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Correcao EPROC/novo_relatorio.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/Lista de notas.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Lista de notas.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/Resultado consulta.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Resultado consulta.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/Resultado filtrado.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Resultado filtrado.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/relatorio_desdobramentos.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/relatorio_desdobramentos.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/relatorio_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/relatorio_email.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/teste_smtp_lss.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/teste_smtp_lss.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/unificado.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/unificado.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Correcao EPROC/relatorio_desdobramentos.xlsx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,8 +38,8 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.unificado">
-    <configuration name="prepara_import" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.novo_relatorio">
+    <configuration name="google_apis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projetos_git" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -58,7 +51,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Correcao EPROC/prepara_import.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Correcao EPROC/google_apis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="novo_relatorio" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="projetos_git" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Correcao EPROC" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Correcao EPROC/novo_relatorio.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -80,27 +94,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Correcao EPROC/relatorio_email.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="teste" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="projetos_git" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Correcao EPROC" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Correcao EPROC/teste.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -153,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.novo_relatorio" />
+        <item itemvalue="Python.google_apis" />
         <item itemvalue="Python.unificado" />
         <item itemvalue="Python.relatorio_email" />
         <item itemvalue="Python.teste_smtp_lss" />
-        <item itemvalue="Python.prepara_import" />
-        <item itemvalue="Python.teste" />
       </list>
     </recent_temporary>
   </component>
