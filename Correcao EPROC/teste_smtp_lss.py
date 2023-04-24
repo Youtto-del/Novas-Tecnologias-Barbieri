@@ -10,7 +10,7 @@ def relatorio_email():
 
     # credenciais para login
     username = "navarroreports@gmail.com"
-    password = "SenhaReport&2023"
+    password = "dezwjuzigsmchbrr"
 
     # lista de imaps: https://www.systoolsgroup.com/imap/
     # login no imap
@@ -31,35 +31,35 @@ def relatorio_email():
     return
 
 
-# def enviar_email():
-#     import smtplib
-#     from email.message import EmailMessage
-#     import datetime
-#
-#     data_atual = datetime.date.today().strftime("%d%m%y")
-#
-#     msg = EmailMessage()
-#     msg['Subject'] = 'Correção digitalizados EPROC'
-#     msg['From'] = 'navarroreports@gmail.com'
-#     msg['To'] = 'felipensamaral@gmail.com' #francis.calza@barbieriadvogados.com
-#     msg.set_content('Segue em anexo o arquivo para correção dos processos digitalizados no EPROC')
-#
-#     with open(rf'.\SmartImports\Correcao Digit EPROC ATT - {data_atual}.xlsx', 'rb') as conteudo_arquivo:
-#         anexo = conteudo_arquivo.read()
-#         msg.add_attachment(anexo,
-#                            maintype='application',
-#                            subtype='xlsx',
-#                            filename=f'Correcao Digit EPROC ATT - {data_atual}.xlsx')
-#
-#     senha = 'dezwjuzigsmchbrr'
-#
-#     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
-#         smtp.login(msg['From'], senha)
-#         smtp.send_message(msg)
-#
-#     print('Email enviado')
-#
-#     return
-#
-#
-# enviar_email()
+def enviar_email():
+    import smtplib
+    from email.message import EmailMessage
+    import datetime
+
+    data_atual = datetime.date.today().strftime("%d%m%y")
+
+    msg = EmailMessage()
+    msg['Subject'] = 'Correção digitalizados EPROC'
+    msg['From'] = 'navarroreports@gmail.com'
+    msg['To'] = 'felipensamaral@gmail.com' #francis.calza@barbieriadvogados.com
+    msg.set_content('Segue em anexo o arquivo para correção dos processos digitalizados no EPROC')
+
+    with open(rf'.\SmartImports\Correcao Digit EPROC ATT - {data_atual}.xlsx', 'rb') as conteudo_arquivo:
+        anexo = conteudo_arquivo.read()
+        msg.add_attachment(anexo,
+                           maintype='application',
+                           subtype='xlsx',
+                           filename=f'Correcao Digit EPROC ATT - {data_atual}.xlsx')
+
+    senha = 'dezwjuzigsmchbrr'
+
+    with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
+        smtp.login(msg['From'], senha)
+        smtp.send_message(msg)
+
+    print('Email enviado')
+
+    return
+
+
+enviar_email()
