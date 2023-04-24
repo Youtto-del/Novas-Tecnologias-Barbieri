@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e09293a7-04c0-4ff0-9a1f-e23a7e0d459b" name="Changes" comment="workspace">
-      <change afterPath="$PROJECT_DIR$/Correcao EPROC/novo_relatorio.py" afterDir="false" />
+    <list default="true" id="e09293a7-04c0-4ff0-9a1f-e23a7e0d459b" name="Changes" comment="correção relatorio por email">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/relatorio_desdobramentos.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Correcao EPROC/Lista de notas.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Lista de notas.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Correcao EPROC/Resultado consulta.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Resultado consulta.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Correcao EPROC/Resultado filtrado.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Resultado filtrado.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Correcao EPROC/novo_relatorio.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/novo_relatorio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Correcao EPROC/unificado.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/unificado.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +42,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.novo_relatorio">
+  <component name="RunManager" selected="Python.unificado">
     <configuration name="google_apis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projetos_git" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -146,9 +150,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.unificado" />
         <item itemvalue="Python.novo_relatorio" />
         <item itemvalue="Python.google_apis" />
-        <item itemvalue="Python.unificado" />
         <item itemvalue="Python.relatorio_email" />
         <item itemvalue="Python.teste_smtp_lss" />
       </list>
@@ -219,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680711478814</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="correção relatorio por email">
+      <created>1682349140474</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1682349140474</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -241,6 +252,7 @@
     <MESSAGE value="Criado modelo que baixa o relatório de desdobramentos do email, renomeando-o para servir de base ao código unificado. Correção do modelo de smartimport para tirar warningalerts" />
     <MESSAGE value="Arquivos de resultados" />
     <MESSAGE value="workspace" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace" />
+    <MESSAGE value="correção relatorio por email" />
+    <option name="LAST_COMMIT_MESSAGE" value="correção relatorio por email" />
   </component>
 </project>

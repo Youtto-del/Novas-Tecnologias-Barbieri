@@ -40,6 +40,7 @@ def relatorio_email():
             with open("relatorio_desdobramentos.xlsx", 'wb') as arquivo_excel:
                 arquivo_excel.write(parte.get_payload(decode=True))
                 arquivo_excel.close()
+    print('Relatorio impresso')
 
 
 # def enviar_email():
