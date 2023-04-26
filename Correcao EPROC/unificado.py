@@ -8,12 +8,12 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 from pathlib import Path
-import novo_relatorio as re
+# import novo_relatorio as re
 from prepara_import import prepara_import
 
 
 # cria o arquivo relatorios_desdobramentos
-re.relatorio_email()
+# re.relatorio_email()
 
 
 def acessa_eproc():
