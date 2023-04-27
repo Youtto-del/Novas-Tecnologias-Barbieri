@@ -2,6 +2,7 @@ def relatorio_email():
 
     import datetime
     from imap_tools import MailBox, AND
+    import json
 
     # READ ME - https://github.com/ikvk/imap_tools#id6
 
@@ -9,6 +10,7 @@ def relatorio_email():
     data_atual = datetime.date.today().strftime("%d%m%y")
 
     # credenciais para login
+    usernamente,
     username = "navarroreports@gmail.com"
     password = "dezwjuzigsmchbrr"
 
@@ -31,55 +33,55 @@ def relatorio_email():
     return
 
 
-def enviar_email():
-    import smtplib
-    from email.mime.multipart import MIMEMultipart
-    from email.mime.text import MIMEText
-    from email.mime.base import MIMEBase
-    from email import encoders
-    import datetime
-
-    data_atual = datetime.date.today().strftime("%d%m%y")
-
-    # cria servidor
-    host = 'smtp.gmail.com'
-    port = '587'
-    login = 'navarroreports@gmail.com'
-    senha = 'dezwjuzigsmchbrr'
-
-    server = smtplib.SMTP(host, port)
-    server.ehlo()
-    server.starttls()
-    server.login(login, senha)
-
-    # cria email
-    corpo_email = 'Segue em anexo o arquivo para correção dos processos digitalizados no EPROC'
-    msg = MIMEMultipart()
-    msg['Subject'] = 'Correção digitalizados EPROC'
-    msg['From'] = login
-    msg['To'] = 'felipensamaral@gmail.com' # francis.calza@barbieriadvogados.com
-    msg.attach(MIMEText(corpo_email, 'Plain'))
-
-    # adiciona anexos
-    local_anexo = rf'.\SmartImports\Correcao Digit EPROC ATT - {data_atual}.xlsx'
-    anexo = open(local_anexo, 'rb')
-
-    att = MIMEBase('application', 'octet-stream')
-    att.set_payload(anexo.read())
-    encoders.encode_base64(att)
-
-    att.add_header('Content-Disposition', f'attachment; filename=Correcao Digit EPROC ATT - {data_atual}.xlsx')
-    anexo.close()
-
-    msg.attach(att)
-
-    # enviar email no servidor SMTP
-    server.sendmail(msg['From'], msg['To'], msg.as_string())
-    server.quit()
-
-    print('Email enviado')
-
-    return
-
-
-enviar_email()
+# def enviar_email():
+#     import smtplib
+#     from email.mime.multipart import MIMEMultipart
+#     from email.mime.text import MIMEText
+#     from email.mime.base import MIMEBase
+#     from email import encoders
+#     import datetime
+#
+#     data_atual = datetime.date.today().strftime("%d%m%y")
+#
+#     # cria servidor
+#     host = 'smtp.gmail.com'
+#     port = '465'
+#     login = 'navarroreports@gmail.com'
+#     senha = 'dezwjuzigsmchbrr'
+#
+#     server = smtplib.SMTP(host, port)
+#     server.ehlo()
+#     server.starttls()
+#     server.login(login, senha)
+#
+#     # cria email
+#     corpo_email = 'Segue em anexo o arquivo para correção dos processos digitalizados no EPROC'
+#     msg = MIMEMultipart()
+#     msg['Subject'] = 'Correção digitalizados EPROC'
+#     msg['From'] = login
+#     msg['To'] = 'felipensamaral@gmail.com' # francis.calza@barbieriadvogados.com
+#     msg.attach(MIMEText(corpo_email, 'Plain'))
+#
+#     # adiciona anexos
+#     local_anexo = rf'.\SmartImports\Correcao Digit EPROC ATT - {data_atual}.xlsx'
+#     anexo = open(local_anexo, 'rb')
+#
+#     att = MIMEBase('application', 'octet-stream')
+#     att.set_payload(anexo.read())
+#     encoders.encode_base64(att)
+#
+#     att.add_header('Content-Disposition', f'attachment; filename=Correcao Digit EPROC ATT - {data_atual}.xlsx')
+#     anexo.close()
+#
+#     msg.attach(att)
+#
+#     # enviar email no servidor SMTP
+#     server.sendmail(msg['From'], msg['To'], msg.as_string())
+#     server.quit()
+#
+#     print('Email enviado')
+#
+#     return
+#
+#
+# enviar_email()

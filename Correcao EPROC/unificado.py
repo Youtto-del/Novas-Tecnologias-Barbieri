@@ -8,17 +8,20 @@ from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 from pathlib import Path
-# import novo_relatorio as re
+import novo_relatorio as re
 from prepara_import import prepara_import
+import json
+
+with open('credentials.json', 'r') as read_file:
+    credenciais = json.load(read_file)
 
 
 # cria o arquivo relatorios_desdobramentos
-# re.relatorio_email()
+re.relatorio_email()
 
 
 def acessa_eproc():
-    login = 'RS036798'
-    senha = 'Barbieri5515*'
+    login, senha = credenciais['credentials_eproc']
     url = 'https://eproc1g.tjrs.jus.br/eproc/'
 
     navegador.get(url)  # ABRE NAVEGADOR

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e09293a7-04c0-4ff0-9a1f-e23a7e0d459b" name="Changes" comment="Ajustes para sincronizar relatorio e execução. codigo funcionando">
+    <list default="true" id="78c9d67e-08f2-4eea-a5ac-f9c8e86bc637" name="Changes" comment="Adiciona gitignore ao github">
+      <change afterPath="$PROJECT_DIR$/Correcao EPROC/credentials.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/Lista de notas.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Lista de notas.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/Resultado consulta.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Resultado consulta.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/Resultado filtrado.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Resultado filtrado.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Correcao EPROC/novo_relatorio.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/novo_relatorio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Correcao EPROC/relatorio_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/relatorio_email.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/unificado.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/unificado.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -13,55 +16,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Python Script" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="ProjectId" id="2MpBpcQcHMq2GWdk0uNpXAv096h" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrador/Desktop/projetos_git&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;
-  }
-}</component>
   <component name="RunManager" selected="Python.unificado">
-    <configuration name="google_apis" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="projetos_git" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Correcao EPROC" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Correcao EPROC/google_apis.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="novo_relatorio" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projetos_git" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -75,48 +34,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Correcao EPROC/novo_relatorio.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="relatorio_email" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="projetos_git" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Correcao EPROC" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Correcao EPROC/relatorio_email.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="teste_smtp_lss" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="projetos_git" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Correcao EPROC" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Correcao EPROC/teste_smtp_lss.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -150,115 +67,10 @@
       <list>
         <item itemvalue="Python.unificado" />
         <item itemvalue="Python.novo_relatorio" />
-        <item itemvalue="Python.google_apis" />
-        <item itemvalue="Python.relatorio_email" />
-        <item itemvalue="Python.teste_smtp_lss" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="e09293a7-04c0-4ff0-9a1f-e23a7e0d459b" name="Changes" comment="" />
-      <created>1678454826790</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1678454826790</updated>
-    </task>
-    <task id="LOCAL-00001" summary="Avanço do codigo de preparação e testes">
-      <created>1678839437417</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1678839437417</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Correção da preparação de dados">
-      <created>1679333443060</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1679333443060</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Correção do código para preparar, filtrar e exportar os dados. Ainda é necessário tornar o modelo reutilizável e validar os filtros">
-      <created>1680119717581</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1680119717581</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Corrigidos detalhes de documentação e arquivo excel final">
-      <created>1680547976431</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1680547976431</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Corrigidos detalhes de documentação e arquivo excel final">
-      <created>1680547984902</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1680547984902</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Criado modelo que baixa o relatório de desdobramentos do email, renomeando-o para servir de base ao código unificado. Correção do modelo de smartimport para tirar warningalerts">
-      <created>1680711420087</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1680711420087</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Arquivos de resultados">
-      <created>1680711461938</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1680711461938</updated>
-    </task>
-    <task id="LOCAL-00008" summary="workspace">
-      <created>1680711478814</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1680711478814</updated>
-    </task>
-    <task id="LOCAL-00009" summary="correção relatorio por email">
-      <created>1682349140474</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1682349140474</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Ajustes para sincronizar relatorio e execução. codigo funcionando">
-      <created>1682352403360</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1682352403360</updated>
-    </task>
-    <option name="localTasksCounter" value="11" />
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Avanço do codigo de preparação e testes" />
-    <MESSAGE value="Correção da preparação de dados" />
-    <MESSAGE value="Correção do código para preparar, filtrar e exportar os dados. Ainda é necessário tornar o modelo reutilizável e validar os filtros" />
-    <MESSAGE value="Corrigidos detalhes de documentação e arquivo excel final" />
-    <MESSAGE value="Criado modelo que baixa o relatório de desdobramentos do email, renomeando-o para servir de base ao código unificado. Correção do modelo de smartimport para tirar warningalerts" />
-    <MESSAGE value="Arquivos de resultados" />
-    <MESSAGE value="workspace" />
-    <MESSAGE value="correção relatorio por email" />
-    <MESSAGE value="Ajustes para sincronizar relatorio e execução. codigo funcionando" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajustes para sincronizar relatorio e execução. codigo funcionando" />
   </component>
 </project>
