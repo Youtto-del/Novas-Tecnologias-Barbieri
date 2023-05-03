@@ -9,6 +9,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 from pathlib import Path
 import novo_relatorio as re
+import envia_email as envia_email
 from prepara_import import prepara_import
 import json
 
@@ -258,5 +259,5 @@ navegador.quit()
 
 # cria o modelo para SmartImport
 prepara_import()
-# re.enviar_email()
+envia_email.enviar_email()
 

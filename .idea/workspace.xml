@@ -2,16 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78c9d67e-08f2-4eea-a5ac-f9c8e86bc637" name="Changes" comment="Adiciona gitignore ao github">
+      <change afterPath="$PROJECT_DIR$/Correcao EPROC/quebra_captcha.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/Lista de notas.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Lista de notas.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/Resultado consulta.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Resultado consulta.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/Resultado filtrado.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Resultado filtrado.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Correcao EPROC/novo_relatorio.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/novo_relatorio.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Correcao EPROC/prepara_import.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/prepara_import.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Correcao EPROC/relatorio_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/envia_email.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Correcao EPROC/unificado.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/unificado.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -53,6 +65,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="prepara_import" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="projetos_git" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Correcao EPROC" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Correcao EPROC/prepara_import.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="unificado" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projetos_git" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -77,6 +110,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.unificado" />
+        <item itemvalue="Python.prepara_import" />
         <item itemvalue="Python.novo_relatorio" />
       </list>
     </recent_temporary>

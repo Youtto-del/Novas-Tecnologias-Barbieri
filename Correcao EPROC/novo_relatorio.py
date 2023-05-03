@@ -41,6 +41,3 @@ def relatorio_email():
                 arquivo_excel.write(parte.get_payload(decode=True))
                 arquivo_excel.close()
     print('Relatorio impresso')
-
-
-relatorio_email()

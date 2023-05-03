@@ -68,7 +68,7 @@ def prepara_import():
     worksheet = modelo_att.active
 
     # Seleciona a planilha na qual será inserido o novo dataframe
-    writer = pd.ExcelWriter(rf'.\SmartImports\Correcao Digit EPROC ATT - {data_atual}.xlsx')
+    writer = pd.ExcelWriter(rf'.\SmartImports\Correcao Digit EPROC ATT - {data_atual}.xlsx', mode='a', if_sheet_exists='overlay')
 
     # Adiciona o novo dataframe na planilha existente
     df_resultado_final.to_excel(writer, index=False, header=False, sheet_name='Importacao', startrow=worksheet.max_row)
@@ -77,3 +77,7 @@ def prepara_import():
     writer.close()
 
     return
+
+
+prepara_import()
+
