@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="78c9d67e-08f2-4eea-a5ac-f9c8e86bc637" name="Changes" comment="Adiciona gitignore ao github">
-      <change afterPath="$PROJECT_DIR$/Correcao EPROC/quebra_captcha.py" afterDir="false" />
+    <list default="true" id="be2ecfeb-2754-45e8-99f6-4741cba56874" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/Lista de notas.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Lista de notas.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/Resultado consulta.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Resultado consulta.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/Resultado filtrado.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/Resultado filtrado.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/novo_relatorio.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/novo_relatorio.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/prepara_import.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/prepara_import.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Correcao EPROC/relatorio_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/envia_email.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Correcao EPROC/envia_email.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/envia_email.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Correcao EPROC/quebra_captcha.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/quebra_captcha.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Correcao EPROC/unificado.py" beforeDir="false" afterPath="$PROJECT_DIR$/Correcao EPROC/unificado.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,13 +35,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "E:/Codigos/pythonProject",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Python.unificado">
+    <configuration name="captcha" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="projetos_git" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Correcao EPROC" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Correcao EPROC/captcha.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="novo_relatorio" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projetos_git" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -86,6 +107,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="quebra_captcha" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="projetos_git" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Correcao EPROC" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Correcao EPROC/quebra_captcha.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="unificado" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="projetos_git" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -110,6 +152,8 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.unificado" />
+        <item itemvalue="Python.captcha" />
+        <item itemvalue="Python.quebra_captcha" />
         <item itemvalue="Python.prepara_import" />
         <item itemvalue="Python.novo_relatorio" />
       </list>
@@ -118,7 +162,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="78c9d67e-08f2-4eea-a5ac-f9c8e86bc637" name="Changes" comment="Adiciona gitignore ao github" />
+      <changelist id="be2ecfeb-2754-45e8-99f6-4741cba56874" name="Changes" comment="" />
       <created>1683044825683</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />

@@ -1,21 +1,22 @@
+import os
+import shutil
+import urllib.request
 from datetime import datetime
 from time import sleep
 import pandas as pd
-from easygui import msgbox
 from selenium.common import NoSuchElementException, ElementClickInterceptedException
-from selenium.webdriver import ActionChains
+from selenium.webdriver import ActionChains, Keys
 from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 from pathlib import Path
 import novo_relatorio as re
 import envia_email as envia_email
-from prepara_import import prepara_import
 import json
+from captcha import quebra_captcha
 
 with open('credentials.json', 'r') as read_file:
     credenciais = json.load(read_file)
-
 
 # cria o arquivo relatorios_desdobramentos
 re.relatorio_email()
@@ -29,8 +30,60 @@ def acessa_eproc():
     navegador.find_element(by=By.XPATH, value='//*[@id="txtUsuario"]').send_keys(login)  # CAMPO LOGIN
     navegador.find_element(by=By.XPATH, value='//*[@id="pwdSenha"]').send_keys(senha)  # CAMPO SENHA
     navegador.find_element(by=By.XPATH, value='//*[@id="sbmEntrar"]').click()  # BOTO ENTRAR
-    msgbox("Resolva o Captcha caso apareça!")
-    navegador.find_element(by=By.XPATH, value='//*[@id="tr0"]').click()  # SELECIONA PERFIL ADVOGADO
+    try:
+        navegador.find_element(by=By.XPATH, value='//*[@id="tr0"]').click()  # SELECIONA PERFIL ADVOGADO
+        passou_captcha = True
+    except:
+        passou_captcha = False
+
+    while not passou_captcha:
+        # Executa o som
+        navegador.find_element(By.XPATH, value='//*[@id="infraImgAudioCaptcha"]').click()
+
+        # Coleta imagem do captcha
+        img_captcha = navegador.find_element(By.XPATH, value='//*[@id="lblInfraCaptcha"]/img').get_attribute('src')
+        nome_img = f'img_captcha_{datetime.now().strftime("%d-%m-%y_%H:%M")}.png'
+
+        # Download imagem
+        urllib.request.urlretrieve(img_captcha, nome_img)
+        shutil.copy(nome_img, './imgs_captcha/', )
+        os.remove(nome_img)
+
+        script = """
+        const download = async (url, filename) => {
+        const data = await fetch(url)
+        const blob = await data.blob()
+        const objectUrl = URL.createObjectURL(blob)
+    
+        const link = document.createElement('a')
+    
+        link.setAttribute('href', objectUrl)
+        link.setAttribute('download', filename)
+        link.style.display = 'none'
+    
+        document.body.appendChild(link)
+      
+        link.click()
+      
+        document.body.removeChild(link)
+    }
+    
+    // Later call it with an URL and filename like so:
+    download('https://eproc1g.tjrs.jus.br/eproc/infra_js/infra_gerar_audio_captcha.php?v=1&1684388349025', 'som_captcha.wav')
+    """
+
+        navegador.execute_script(script)
+        sleep(1)
+        resultado = quebra_captcha()
+        navegador.find_element(By.ID, value='txtInfraCaptcha').send_keys(resultado)
+        os.remove('som_captcha.wav')
+        navegador.find_element(By.XPATH, value='//*[@id="frmLogin"]/div[2]/button').click()
+        sleep(2)
+        try:
+            navegador.find_element(by=By.XPATH, value='//*[@id="tr0"]').click()  # SELECIONA PERFIL ADVOGADO
+            passou_captcha = True
+        except:
+            passou_captcha = False
 
 
 def download_planilha_comum():
@@ -41,7 +94,8 @@ def download_planilha_comum():
     )
     actions.move_to_element(planilha).click().perform()
     sleep(0.5)
-    navegador.find_element(By.XPATH, value='//*[@id="conteudoCitacoesIntimacoesRS"]/div[2]/table/tbody/tr[4]/td[2]/a').click()
+    navegador.find_element(By.XPATH,
+                           value='//*[@id="conteudoCitacoesIntimacoesRS"]/div[2]/table/tbody/tr[4]/td[2]/a').click()
     sleep(2)
     janelas = navegador.window_handles
     navegador.switch_to.window(janelas[1])
@@ -200,7 +254,7 @@ def coleta_originarios(cadastrados, consultas, desdobramentos):
         cj_status2.append(status2)
         cj_status3.append(status3)
 
-        print(f'Contagem: {item}/{len(consultas)-1}')
+        print(f'Contagem: {item}/{len(consultas) - 1}')
         item += 1
 
     dicionario = {'Processo': cj_processos,
@@ -249,7 +303,6 @@ navegador = webdriver.Chrome(ChromeDriverManager().install(), options=options)
 navegador.implicitly_wait(5)
 actions = ActionChains(navegador)
 
-
 acessa_eproc()
 download_planilha_comum()
 cadastrados, consultas, desdobramentos = realiza_triagem()
@@ -258,6 +311,7 @@ consulta_base_de_dados(df_notas)
 navegador.quit()
 
 # cria o modelo para SmartImport
+from prepara_import import prepara_import
+
 prepara_import()
 envia_email.enviar_email()
-

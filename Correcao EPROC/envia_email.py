@@ -29,7 +29,7 @@ def enviar_email():
     msg = MIMEMultipart()
     msg['Subject'] = 'Correção digitalizados EPROC'
     msg['From'] = username
-    msg['To'] = 'felipensamaral@gmail.com'  # francis.calza@barbieriadvogados.com
+    msg['To'] = 'francis.calza@barbieriadvogados.com'
     msg.attach(MIMEText(corpo_email, 'Plain'))
 
     # adiciona anexos
